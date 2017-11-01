@@ -13,6 +13,15 @@ def main():
 
     manager = Contacts(contact_book)
 
+    with open("contacts.txt","r") as c_file:
+        for line in c_file:
+            try:
+                first_name, last_name, birth_date, address, email, phone_number = line.split(",")
+                contact = Person(first_name=first_name, last_name=last_name, birth_date=birth_date, address=address,email=email, phone_number=phone_number)
+                contact_book.append(contact)
+            except ValueError:
+                continue
+
     while True:
         print "Choose: (1 - 5):"
         print ""
@@ -20,7 +29,8 @@ def main():
         print "2. Add new contact"
         print "3. Edit contacts"
         print "4. Delete contacts"
-        print "5. Close"
+        print "5. Save changes"
+        print "6. Close"
         print ""
 
         choice = raw_input("Enter your choice: ")
@@ -36,6 +46,8 @@ def main():
         elif choice == "4":
             manager.delete_contact()
         elif choice == "5":
+            manager.save_to_disk()
+        elif choice == "6":
             print "Closing program ..."
             break
         else:

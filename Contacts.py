@@ -1,4 +1,4 @@
-from Person import Person           # Ali je bolje, da dam vsak 'def' (output, add new contact, edit contacts, delete contacts) v svoj file ali da so funkcije za urejanje skupaj?
+from Person import Person
                                     # Kako dodane, spremenjene ali izbrisane podatke shranim in kam? ... da se program ob zagonu ne zacne znova, temvec tam, ker se je urejanje koncalo?
 
 class Contacts(object):
@@ -6,6 +6,7 @@ class Contacts(object):
 
     def __init__(self, contact_book):
         self.contact_book = contact_book
+
 
     def output_contacts(self):
         for index, person in enumerate(self.contact_book, start = 1):
@@ -29,7 +30,7 @@ class Contacts(object):
         email = raw_input("Enter email: ")
         phone_number = raw_input("Enter phone number: ")
 
-        new_contact = Person(first_name=first_name, last_name=last_name, birth_date=birth_date, address=address, email=email, phone_number=phone_number)
+        new_contact = Person(first_name=first_name, last_name=last_name, birth_date=birth_date, address=address,email=email, phone_number=phone_number)
         self.contact_book.append(new_contact)
 
         print ""
@@ -52,7 +53,7 @@ class Contacts(object):
 
         edit_first_name = raw_input("Edit first name: ")    # tu bi zelela, da se vse moznosti za edit pokazejo naenkrat in bi se spreminjale samo tiste, ki bi jih zelel...
         selected_contact.first_name = edit_first_name       # npr. ime bi se prikazalo kot placeholder, ki ga spremenis, ce zelis, ce ne ostane isto... enako naprej za spodnje podatke..
-                                                            # da ni treba vedno znova vnasati vse podatke... naredim to z def in if / else ali obstaja krajsa moznost?
+                                                                # da ni treba vedno znova vnasati vse podatke... naredim to z def in if / else ali obstaja krajsa moznost?
         edit_last_name = raw_input("Edit last name: ")
         selected_contact.last_name = edit_last_name
 
@@ -82,3 +83,9 @@ class Contacts(object):
         print ""
 
         self.contact_book.pop(select_ID_to_delete - 1)
+
+    def save_to_disk(self):
+        with open("contacts.txt", "w+") as conct_file:
+            for contact in self.contact_book:
+                conct_file.write("%s,%s,%s,%s,%s,%s\n" % (contact.first_name, contact.last_name, contact.birth_date, contact.address, contact.email, contact.phone_number))
+

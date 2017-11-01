@@ -1,0 +1,14 @@
+Tanja,Fink,01.02.1973,Kersnikova 4, 1000 Ljubljana,tanja.fink@gmail.com,030 222 333
+Mateja,Kuznar,06.12.1999,Brezovnik 11, 2000 Maribor,mateja.kuznar@gmail.com,051 555 666
+Toni,Potocnik,23.10.1980,Krajnceva ulica 9, 1000 Ljubljana,toni.potocnik@gmail.com,040 111 444
+Marko,Makovec,08.09.1985,Gornji dol 15 a, 3000 Celje,marko.makovec@gmail.com,031 444 888
+Sanja,Lah,17.05.1983,Ravnik 6, 1236 Trzin,sanja.lah@gmail.com,030 999 777
+spremenjen ff,ff,ff,ff,f,ff
+
+spemenjen dd,dd,dd,dd,dd,dd
+
+helena,blagne,55,55,55,55
+
+cc,cc,cc,cc,cc,cc
+
+nov vnos,dd,dd,dd,dd,dd
