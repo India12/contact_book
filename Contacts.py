@@ -1,7 +1,8 @@
 from Person import Person
-                                    # Kako dodane, spremenjene ali izbrisane podatke shranim in kam? ... da se program ob zagonu ne zacne znova, temvec tam, ker se je urejanje koncalo?
-
-class Contacts(object):
+                                    # Kako dodane, spremenjene ali izbrisane podatke shranim in kam? ... 
+                                    # da se program ob zagonu ne zacne znova, temvec tam, ker se je urejanje koncalo? Odgovor na to 
+                                    # vprasanje ze imam in je vključen v kodo.. me pa zanima, zakaj se pri shranjevanju pojavi razmak  
+class Contacts(object):             # med vrsticami v txt.file? .. ta razmak pri edit contact in delete contact izgine.....
     contact_book = []
 
     def __init__(self, contact_book):
@@ -53,7 +54,7 @@ class Contacts(object):
 
         edit_first_name = raw_input("Edit first name: ")    # tu bi zelela, da se vse moznosti za edit pokazejo naenkrat in bi se spreminjale samo tiste, ki bi jih zelel...
         selected_contact.first_name = edit_first_name       # npr. ime bi se prikazalo kot placeholder, ki ga spremenis, ce zelis, ce ne ostane isto... enako naprej za spodnje podatke..
-                                                                # da ni treba vedno znova vnasati vse podatke... naredim to z def in if / else ali obstaja krajsa moznost?
+                                                            # da ni treba vedno znova vnasati vse podatke... naredim to z def in if / else ali obstaja krajsa moznost?
         edit_last_name = raw_input("Edit last name: ")
         selected_contact.last_name = edit_last_name
 
