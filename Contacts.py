@@ -1,8 +1,6 @@
 from Person import Person
-                                    # Kako dodane, spremenjene ali izbrisane podatke shranim in kam? ... 
-                                    # da se program ob zagonu ne zacne znova, temvec tam, ker se je urejanje koncalo? Odgovor na to 
-                                    # vprasanje ze imam in je vključen v kodo.. me pa zanima, zakaj se pri shranjevanju pojavi razmak  
-class Contacts(object):             # med vrsticami v txt.file? .. ta razmak pri edit contact in delete contact izgine.....
+                                    # zakaj se pri shranjevanju pojavi razmak med vrsticami v txt.file?
+class Contacts(object):             # .. ta razmak pri edit contact in delete contact izgine.....
     contact_book = []
 
     def __init__(self, contact_book):
